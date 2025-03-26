@@ -60,7 +60,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/kimanithuo1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
@@ -70,7 +70,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/rkimani-thuo/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
@@ -80,7 +80,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="https://twitter.com/kimanithuo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
@@ -90,7 +90,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:joseph.thuo@example.com"
+                  href="mailto:jkimanithuo@gmail.com"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Email

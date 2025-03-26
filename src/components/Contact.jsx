@@ -76,14 +76,14 @@ const Contact = () => {
     {
       icon: <FiMail className="w-6 h-6" />,
       title: "Email",
-      content: "joseph.thuo@example.com",
-      link: "mailto:joseph.thuo@example.com",
+      content: "jkimanithuo@gmail.com",
+      link: "mailto:jkimanithuo@gmail.com",
     },
     {
       icon: <FiPhone className="w-6 h-6" />,
       title: "Phone",
-      content: "+254 123 456 789",
-      link: "tel:+254123456789",
+      content: "+254 728 284 816",
+      link: "tel:+254728284816",
     },
     {
       icon: <FiMapPin className="w-6 h-6" />,
@@ -150,7 +150,7 @@ const Contact = () => {
                 <h4 className="font-medium text-gray-800 dark:text-white mb-4">Follow Me</h4>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/kimanithuo1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"
@@ -159,7 +159,7 @@ const Contact = () => {
                     <FiGithub className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/rkimani-thuo/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"
@@ -168,7 +168,7 @@ const Contact = () => {
                     <FiLinkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://twitter.com"
+                    href="https://twitter.com/kimanithuo"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"

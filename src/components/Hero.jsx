@@ -1,10 +1,17 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { FiArrowRight, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { Link } from "react-router-dom"
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -61,7 +68,7 @@ const Hero = () => {
 
             <motion.div className="flex gap-4" variants={item}>
               <a
-                href="https://github.com"
+                href="https://github.com/kimanithuo1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"
@@ -70,7 +77,7 @@ const Hero = () => {
                 <FiGithub className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/rkimani-thuo/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"
@@ -79,7 +86,7 @@ const Hero = () => {
                 <FiLinkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/kimanithuo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"
@@ -94,7 +101,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full blur opacity-75 animate-pulse"></div>
               <img
-                src="/placeholder.svg?height=500&width=500"
+                src="https://photos.google.com/photo/AF1QipMLZIm0mIQSUb14VYolI6g7YgvLuDNjK2rII7Db"
                 alt="Joseph Kimani Thuo"
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white dark:border-gray-800"
               />

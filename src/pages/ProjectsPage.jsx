@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FiGithub, FiExternalLink, FiFilter } from "react-icons/fi"
 
-const Projects = () => {
+const ProjectsPage = () => {
   const [filter, setFilter] = useState("all")
 
   const projects = [
@@ -17,6 +17,7 @@ const Projects = () => {
       tags: ["react", "tailwind", "ui/ux"],
       github: "https://github.com/kimanithuo1/my-portfolio",
       demo: "https://my-portfolio-kimanithuos-projects.vercel.app",
+      featured: true,
     },
     {
       id: 2,
@@ -27,6 +28,7 @@ const Projects = () => {
       tags: ["react", "api"],
       github: "https://github.com/kimanithuo1/nurseshelf",
       demo: "https://nurseshelf-kimanithuos-projects.vercel.app",
+      featured: false,
     },
     {
       id: 3,
@@ -36,6 +38,7 @@ const Projects = () => {
       tags: ["react", "tailwind"],
       github: "https://github.com/kimanithuo1/my-form-app",
       demo: "https://my-form-app-kimanithuos-projects.vercel.app",
+      featured: true,
     },
     {
       id: 4,
@@ -46,13 +49,63 @@ const Projects = () => {
       tags: ["react", "api"],
       github: "https://github.com/kimanithuo1/maumaustories",
       demo: "https://maumaustories-kimanithuos-projects.vercel.app",
+      featured: false,
+    },
+    {
+      id: 5,
+      title: "Shugame",
+      description: "An interactive gaming platform with multiplayer capabilities and real-time score tracking.",
+      image: "/placeholder.svg?height=600&width=800",
+      tags: ["react", "api", "ui/ux"],
+      github: "https://github.com/kimanithuo1/shugame",
+      demo: "https://shugame-kimanithuos-projects.vercel.app",
+      featured: false,
+    },
+    {
+      id: 6,
+      title: "Home Movers Nairobi",
+      description:
+        "A service platform connecting people with professional movers in Nairobi, featuring booking and tracking capabilities.",
+      image: "/placeholder.svg?height=600&width=800",
+      tags: ["react", "tailwind", "api"],
+      github: "https://github.com/kimanithuo1/home-movers-nairobi",
+      demo: "https://home-movers-nairobi-kimanithuos-projects.vercel.app",
+      featured: true,
+    },
+    {
+      id: 7,
+      title: "Lustre Lux",
+      description:
+        "A jewelry e-commerce website with product catalog, shopping cart, and secure checkout functionality.",
+      image: "/placeholder.svg?height=600&width=800",
+      tags: ["react", "tailwind", "api"],
+      github: "https://github.com/kimanithuo1/lustre-lux",
+      demo: "https://lustre-lux-kimanithuos-projects.vercel.app",
+      featured: true,
+    },
+    {
+      id: 8,
+      title: "Homenest Essentials",
+      description:
+        "A home decor and essentials e-commerce platform with product filtering and user account management.",
+      image: "/placeholder.svg?height=600&width=800",
+      tags: ["react", "tailwind", "api"],
+      github: "https://github.com/kimanithuo1/homenest-essentials",
+      demo: "https://homenest-essentials-kimanithuos-projects.vercel.app",
+      featured: false,
     },
   ]
 
-  const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.tags.includes(filter))
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : filter === "featured"
+        ? projects.filter((project) => project.featured)
+        : projects.filter((project) => project.tags.includes(filter))
 
   const filters = [
-    { value: "all", label: "All" },
+    { value: "all", label: "All Projects" },
+    { value: "featured", label: "Featured" },
     { value: "react", label: "React" },
     { value: "tailwind", label: "Tailwind" },
     { value: "api", label: "API" },
@@ -60,28 +113,33 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="pt-20 pb-20 bg-gray-50 dark:bg-gray-900"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
             My Projects
-          </h2>
+          </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mx-auto mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of my recent projects. Each project is a unique piece of development that showcases my skills
-            and passion for web development.
+            Explore my portfolio of web development projects. Each project represents a unique challenge and showcases
+            different skills and technologies.
           </p>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <div className="flex items-center bg-white dark:bg-gray-800 rounded-full px-2 py-1 shadow-sm">
-            <FiFilter className="text-gray-500 dark:text-gray-400 ml-2" />
+          <div className="flex flex-wrap items-center bg-white dark:bg-gray-800 rounded-full px-2 py-1 shadow-sm">
+            <FiFilter className="text-gray-500 dark:text-gray-400 ml-2 mr-2" />
             {filters.map((item) => (
               <button
                 key={item.value}
@@ -163,24 +221,10 @@ const Projects = () => {
             ))}
           </motion.div>
         </AnimatePresence>
-
-        <div className="text-center mt-12">
-          <a
-            href="https://github.com/kimanithuo1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2"
-          >
-            <button className="px-6 py-3 rounded-full border-2 border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 font-medium hover:bg-purple-600 hover:text-white dark:hover:bg-purple-400 dark:hover:text-gray-900 transition-colors inline-flex items-center gap-2">
-              <FiGithub className="w-5 h-5" />
-              <span>View More Projects on GitHub</span>
-            </button>
-          </a>
-        </div>
       </div>
-    </section>
+    </motion.main>
   )
 }
 
-export default Projects
+export default ProjectsPage
 

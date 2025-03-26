@@ -5,10 +5,10 @@ import { useState, useEffect } from "react"
 import { AnimatePresence } from "framer-motion"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-//import Home from "./pages/Home"
-//import ProjectsPage from "./pages/ProjectsPage"
-//import AboutPage from "./pages/AboutPage"
-//import ContactPage from "./pages/ContactPage"
+import Home from "./pages/Home"
+import ProjectsPage from "./pages/ProjectsPage"
+import AboutPage from "./pages/AboutPage"
+import ContactPage from "./pages/ContactPage"
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
