@@ -94,7 +94,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
+    <section id="contact" className="py-20 bg-[#F5D1D8]/10 dark:bg-[#1E293B]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -103,11 +103,9 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-            Get In Touch
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mx-auto mb-6"></div>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#3D62C1] dark:text-white">Get In Touch</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] mx-auto mb-6"></div>
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             Have a project in mind or want to discuss potential opportunities? Feel free to reach out to me using the
             form below or through my contact information.
           </p>
@@ -121,8 +119,8 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             className="md:col-span-1"
           >
-            <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 h-full">
-              <h3 className="text-xl font-bold mb-6 text-gray-800 dark:text-white">Contact Information</h3>
+            <div className="bg-white dark:bg-[#121826] rounded-xl p-6 h-full border-l-4 border-[#BB8698] shadow-md">
+              <h3 className="text-xl font-bold mb-6 text-[#3D62C1] dark:text-white">Contact Information</h3>
 
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
@@ -133,12 +131,12 @@ const Contact = () => {
                     rel={item.title === "Location" ? "noopener noreferrer" : undefined}
                     className="flex items-start gap-4 group"
                   >
-                    <div className="p-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg text-white">
+                    <div className="p-3 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] rounded-lg text-white">
                       {item.icon}
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-800 dark:text-white">{item.title}</h4>
-                      <p className="text-gray-600 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                      <h4 className="font-medium text-[#3D62C1] dark:text-white">{item.title}</h4>
+                      <p className="text-gray-700 dark:text-gray-300 group-hover:text-[#F6AC28] dark:group-hover:text-[#F6AC28] transition-colors">
                         {item.content}
                       </p>
                     </div>
@@ -147,13 +145,13 @@ const Contact = () => {
               </div>
 
               <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-600">
-                <h4 className="font-medium text-gray-800 dark:text-white mb-4">Follow Me</h4>
+                <h4 className="font-medium text-[#3D62C1] dark:text-white mb-4">Follow Me</h4>
                 <div className="flex gap-4">
                   <a
                     href="https://github.com/kimanithuo1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"
+                    className="p-3 rounded-full bg-[#F5D1D8]/20 text-[#3D62C1] hover:bg-[#3D62C1] hover:text-white transition-colors duration-300"
                     aria-label="GitHub"
                   >
                     <FiGithub className="w-5 h-5" />
@@ -162,7 +160,7 @@ const Contact = () => {
                     href="https://www.linkedin.com/in/rkimani-thuo/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"
+                    className="p-3 rounded-full bg-[#F5D1D8]/20 text-[#3D62C1] hover:bg-[#3D62C1] hover:text-white transition-colors duration-300"
                     aria-label="LinkedIn"
                   >
                     <FiLinkedin className="w-5 h-5" />
@@ -171,7 +169,7 @@ const Contact = () => {
                     href="https://twitter.com/kimanithuo"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-colors"
+                    className="p-3 rounded-full bg-[#F5D1D8]/20 text-[#3D62C1] hover:bg-[#3D62C1] hover:text-white transition-colors duration-300"
                     aria-label="Twitter"
                   >
                     <FiTwitter className="w-5 h-5" />
@@ -188,8 +186,8 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-2"
           >
-            <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-6 text-gray-800 dark:text-white">Send Me a Message</h3>
+            <div className="bg-white dark:bg-[#121826] rounded-xl p-6 shadow-md border-l-4 border-[#F6AC28]">
+              <h3 className="text-xl font-bold mb-6 text-[#3D62C1] dark:text-white">Send Me a Message</h3>
 
               {submitSuccess ? (
                 <motion.div
@@ -211,9 +209,9 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border ${
-                        errors.name ? "border-red-500" : "border-gray-300 dark:border-gray-600"
-                      } focus:outline-none focus:ring-2 focus:ring-purple-500 dark:text-white`}
+                      className={`w-full px-4 py-3 rounded-lg bg-[#F5D1D8]/10 dark:bg-[#121826] border ${
+                        errors.name ? "border-red-500" : "border-[#BB8698]/30 dark:border-gray-600"
+                      } focus:outline-none focus:ring-2 focus:ring-[#3D62C1] dark:text-white`}
                       placeholder="Your name"
                     />
                     {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
@@ -229,9 +227,9 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border ${
-                        errors.email ? "border-red-500" : "border-gray-300 dark:border-gray-600"
-                      } focus:outline-none focus:ring-2 focus:ring-purple-500 dark:text-white`}
+                      className={`w-full px-4 py-3 rounded-lg bg-[#F5D1D8]/10 dark:bg-[#121826] border ${
+                        errors.email ? "border-red-500" : "border-[#BB8698]/30 dark:border-gray-600"
+                      } focus:outline-none focus:ring-2 focus:ring-[#3D62C1] dark:text-white`}
                       placeholder="Your email"
                     />
                     {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
@@ -250,9 +248,9 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows="5"
-                      className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border ${
-                        errors.message ? "border-red-500" : "border-gray-300 dark:border-gray-600"
-                      } focus:outline-none focus:ring-2 focus:ring-purple-500 dark:text-white`}
+                      className={`w-full px-4 py-3 rounded-lg bg-[#F5D1D8]/10 dark:bg-[#121826] border ${
+                        errors.message ? "border-red-500" : "border-[#BB8698]/30 dark:border-gray-600"
+                      } focus:outline-none focus:ring-2 focus:ring-[#3D62C1] dark:text-white`}
                       placeholder="Your message"
                     ></textarea>
                     {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
@@ -261,7 +259,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                    className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] text-white font-medium hover:shadow-colored transition-all flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>

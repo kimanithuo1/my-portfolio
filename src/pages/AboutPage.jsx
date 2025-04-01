@@ -73,12 +73,12 @@ const AboutPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-20"
+      className="pt-20 bg-white dark:bg-[#121826]"
     >
       <About />
 
       {/* Experience Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-[#F5D1D8]/10 dark:bg-[#1E293B]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -87,10 +87,10 @@ const AboutPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28]">
               Work Experience
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mx-auto"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] mx-auto"></div>
           </motion.div>
 
           <div className="max-w-3xl mx-auto">
@@ -101,13 +101,13 @@ const AboutPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="mb-12 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-purple-600 before:to-blue-500"
+                className="mb-12 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-[#3D62C1] before:to-[#F6AC28]"
               >
-                <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 transform -translate-x-1/2"></div>
+                <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-r from-[#3D62C1] to-[#F6AC28] transform -translate-x-1/2"></div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white">{exp.title}</h3>
                 <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="text-purple-600 dark:text-purple-400 font-medium">{exp.company}</span>
-                  <span className="text-gray-500 dark:text-gray-400 text-sm px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
+                  <span className="text-[#BB8698] dark:text-[#BB8698] font-medium">{exp.company}</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm px-2 py-1 bg-gray-100 dark:bg-[#121826] rounded-full">
                     {exp.period}
                   </span>
                 </div>
@@ -119,7 +119,7 @@ const AboutPage = () => {
       </section>
 
       {/* Education Section */}
-      <section className="py-20 bg-white dark:bg-gray-800">
+      <section className="py-20 bg-white dark:bg-[#121826]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -128,10 +128,10 @@ const AboutPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28]">
               Education
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mx-auto"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] mx-auto"></div>
           </motion.div>
 
           <div className="max-w-3xl mx-auto">
@@ -142,13 +142,13 @@ const AboutPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="mb-12 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-purple-600 before:to-blue-500"
+                className="mb-12 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-[#3D62C1] before:to-[#F6AC28]"
               >
-                <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 transform -translate-x-1/2"></div>
+                <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-r from-[#3D62C1] to-[#F6AC28] transform -translate-x-1/2"></div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white">{edu.degree}</h3>
                 <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="text-purple-600 dark:text-purple-400 font-medium">{edu.institution}</span>
-                  <span className="text-gray-500 dark:text-gray-400 text-sm px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
+                  <span className="text-[#BB8698] dark:text-[#BB8698] font-medium">{edu.institution}</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm px-2 py-1 bg-gray-100 dark:bg-[#121826] rounded-full">
                     {edu.period}
                   </span>
                 </div>
@@ -160,7 +160,7 @@ const AboutPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-[#F5D1D8]/10 dark:bg-[#1E293B]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -169,10 +169,10 @@ const AboutPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28]">
               Services
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] mx-auto mb-6"></div>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               I offer a range of services to help businesses and individuals establish a strong online presence with
               modern web technologies.
@@ -187,12 +187,12 @@ const AboutPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-[#121826] rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="w-14 h-14 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg flex items-center justify-center text-white mb-6">
+                <div className="w-14 h-14 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] rounded-lg flex items-center justify-center text-white mb-6">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-[#3D62C1] dark:text-white">{service.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
               </motion.div>
             ))}

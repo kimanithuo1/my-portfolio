@@ -118,7 +118,7 @@ const ProjectsPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-20 pb-20 bg-gray-50 dark:bg-gray-900"
+      className="pt-20 pb-20 bg-[#F5D1D8]/10 dark:bg-[#1E293B]"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -127,10 +127,10 @@ const ProjectsPage = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28]">
             My Projects
           </h1>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] mx-auto mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Explore my portfolio of web development projects. Each project represents a unique challenge and showcases
             different skills and technologies.
@@ -138,7 +138,7 @@ const ProjectsPage = () => {
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <div className="flex flex-wrap items-center bg-white dark:bg-gray-800 rounded-full px-2 py-1 shadow-sm">
+          <div className="flex flex-wrap items-center bg-white dark:bg-[#121826] rounded-full px-2 py-1 shadow-sm">
             <FiFilter className="text-gray-500 dark:text-gray-400 ml-2 mr-2" />
             {filters.map((item) => (
               <button
@@ -146,8 +146,8 @@ const ProjectsPage = () => {
                 onClick={() => setFilter(item.value)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   filter === item.value
-                    ? "bg-gradient-to-r from-purple-600 to-blue-500 text-white"
-                    : "text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+                    ? "bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] text-white"
+                    : "text-gray-600 dark:text-gray-300 hover:text-[#3D62C1] dark:hover:text-[#3D62C1]"
                 }`}
               >
                 {item.label}
@@ -169,7 +169,7 @@ const ProjectsPage = () => {
               <motion.div
                 key={project.id}
                 whileHover={{ y: -10 }}
-                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
+                className="bg-white dark:bg-[#121826] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
               >
                 <div className="relative overflow-hidden group">
                   <img
@@ -177,7 +177,7 @@ const ProjectsPage = () => {
                     alt={project.title}
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3D62C1]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4 w-full flex justify-between items-center">
                       <h3 className="text-white font-bold text-lg">{project.title}</h3>
                       <div className="flex gap-2">
@@ -185,7 +185,7 @@ const ProjectsPage = () => {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/40 transition-colors"
+                          className="p-2 bg-[#F6AC28]/90 backdrop-blur-sm rounded-full text-white hover:bg-[#F6AC28] transition-colors"
                           aria-label="View GitHub repository"
                         >
                           <FiGithub />
@@ -194,7 +194,7 @@ const ProjectsPage = () => {
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/40 transition-colors"
+                          className="p-2 bg-[#F6AC28]/90 backdrop-blur-sm rounded-full text-white hover:bg-[#F6AC28] transition-colors"
                           aria-label="View live demo"
                         >
                           <FiExternalLink />
@@ -204,13 +204,21 @@ const ProjectsPage = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[#3D62C1] dark:text-white">{project.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium"
+                        className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          tag === "react"
+                            ? "bg-[#3D62C1]/10 text-[#3D62C1] dark:bg-[#3D62C1]/30 dark:text-blue-300"
+                            : tag === "tailwind"
+                              ? "bg-[#BB8698]/10 text-[#BB8698] dark:bg-[#BB8698]/30 dark:text-pink-300"
+                              : tag === "api"
+                                ? "bg-[#F6AC28]/10 text-[#F6AC28] dark:bg-[#F6AC28]/30 dark:text-yellow-300"
+                                : "bg-[#F5D1D8]/20 text-[#BB8698] dark:bg-[#F5D1D8]/30 dark:text-pink-200"
+                        }`}
                       >
                         {tag}
                       </span>

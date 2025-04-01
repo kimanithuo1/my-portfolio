@@ -4,12 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-softpink: 245, 209, 216;
+  --color-royalblue: 61, 98, 193;
+  --color-mutedrose: 187, 134, 152;
+  --color-vibrantgold: 246, 172, 40;
+  --color-darkbg: 18, 24, 38;
+  --color-darkcard: 30, 41, 59;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Inter", sans-serif;
+  @apply bg-white dark:bg-[#121826];
 }
 
 /* For WebKit browsers (Chrome, Safari) */
@@ -22,18 +32,65 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #9333ea, #3b82f6);
+  background: linear-gradient(to bottom, #3d62c1, #bb8698, #f6ac28);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #7e22ce, #2563eb);
+  background: linear-gradient(to bottom, #2e4a94, #9e6c7c, #d18e0e);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3d62c1, #bb8698, #f6ac28);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2e4a94, #9e6c7c, #d18e0e);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom utility classes */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-full bg-[#F6AC28] text-white font-medium transition-colors duration-300 shadow-md hover:bg-[#BB8698];
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-full border-2 border-[#3D62C1] text-[#3D62C1] hover:bg-[#3D62C1] hover:text-white font-medium transition-colors duration-300;
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28];
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-[#3D62C1] dark:text-white;
+  }
+
+  .section-divider {
+    @apply w-20 h-1 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] mx-auto mb-6;
+  }
 }
 
 
-
-/* Gradient text utility */
-.gradient-text {
-  @apply bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent;
-}
 
