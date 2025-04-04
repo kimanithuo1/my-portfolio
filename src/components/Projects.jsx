@@ -10,13 +10,13 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "My Portfolio",
+      title: "Personal Portfolio",
       description:
         "A personal portfolio website showcasing my projects, skills, and experience as a frontend developer.",
       image: "/placeholder.svg?height=600&width=800",
       tags: ["react", "tailwind", "ui/ux"],
       github: "https://github.com/kimanithuo1/my-portfolio",
-      demo: "https://my-portfolio-kimanithuos-projects.vercel.app",
+      demo: "https://joseph-thuo-portfolio.vercel.app/",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const Projects = () => {
       image: "/placeholder.svg?height=600&width=800",
       tags: ["react", "api"],
       github: "https://github.com/kimanithuo1/nurseshelf",
-      demo: "https://nurseshelf-kimanithuos-projects.vercel.app",
+      demo: "https://nurseshelf.vercel.app/",
     },
     {
       id: 3,
@@ -35,17 +35,17 @@ const Projects = () => {
       image: "/placeholder.svg?height=600&width=800",
       tags: ["react", "tailwind"],
       github: "https://github.com/kimanithuo1/my-form-app",
-      demo: "https://my-form-app-kimanithuos-projects.vercel.app",
+      demo: "https://hackathonsignupform-beige.vercel.app/",
     },
     {
       id: 4,
-      title: "Mauma Stories",
+      title: "Echoes Of Africa",
       description:
         "A storytelling platform that allows users to create, share, and discover stories from around the world.",
       image: "/placeholder.svg?height=600&width=800",
       tags: ["react", "api"],
       github: "https://github.com/kimanithuo1/maumaustories",
-      demo: "https://maumaustories-kimanithuos-projects.vercel.app",
+      demo: "https://echoesofafrica.vercel.app/",
     },
   ]
 

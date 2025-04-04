@@ -101,7 +101,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#3D62C1] via-[#BB8698] to-[#F6AC28] rounded-full blur opacity-75 animate-pulse"></div>
               <img
-                src="/placeholder.svg?height=500&width=500"
+                src="https://avatars.githubusercontent.com/u/180545919?v=4"
                 alt="Joseph Kimani Thuo"
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white dark:border-[#1E293B]"
               />
